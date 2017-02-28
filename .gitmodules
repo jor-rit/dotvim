@@ -1,0 +1,51 @@
+[submodule "pack/themes/opt/vim-solarized8"]
+	path = pack/themes/opt/vim-solarized8
+	url = https://github.com/lifepillar/vim-solarized8.git
+[submodule "pack/themes/vim-airline"]
+	path = pack/themes/opt/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "pack/themes/opt/vim-airline-themes"]
+	path = pack/themes/opt/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "pack/nav/start/ctrlp.vim"]
+	path = pack/nav/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "pack/git/start/vim-fugutive"]
+	path = pack/git/start/vim-fugutive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "pack/git/start/vim-gitgutter"]
+	path = pack/git/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "pack/ide/vim-syntastic"]
+	path = pack/ide/start/vim-syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "pack/ide/start/YouCompleteMe"]
+	path = pack/ide/start/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "pack/nav/start/nerdtree"]
+	path = pack/nav/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "pack/ide/start/vim-surround"]
+	path = pack/ide/start/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "pack/ide/start/tagbar"]
+	path = pack/ide/start/tagbar
+	url = git@github.com:majutsushi/tagbar.git
+[submodule "pack/ide/start/nerdcommenter"]
+	path = pack/ide/start/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "pack/ide/start/supertab"]
+	path = pack/ide/start/supertab
+	url = https://github.com/ervandew/supertab
+[submodule "pack/ide/start/ultisnips"]
+	path = pack/ide/start/ultisnips
+	url = git@github.com:SirVer/ultisnips.git
+[submodule "pack/ide/start/vim-snippets"]
+	path = pack/ide/start/vim-snippets
+	url = git@github.com:honza/vim-snippets.git
+[submodule "pack/go/start/vim-go"]
+	path = pack/go/start/vim-go
+	url = git@github.com:fatih/vim-go.git
+[submodule "pack/ide/start/editorconfig-vim"]
+	path = pack/ide/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git

@@ -9,6 +9,7 @@ set fileencoding=utf-8
 
 set mouse=a
 
+
 if &t_Co > 2 || has("gui_running") "have colors
   syntax enable "syntac highlighting
   set hlsearch  "highlight search pattern
@@ -38,7 +39,6 @@ filetype plugin indent on "load indent file for filetype
 set nomodeline
 let g:secure_modelines_verbose=1
 
-"TODO: check for djangoish directory?
 augroup django
     autocmd!
     autocmd BufRead,BufNewFile models.py,views.py,forms.py,admin.py,urls.py setlocal ft=python.django
@@ -56,27 +56,24 @@ augroup web
 augroup END
 
 
-set ofu=syntaxcomplete#Complete
-
 set list "show special chars
 set list listchars=tab:»·,eol:¶,trail:·,precedes:→,extends:←
-set number "show line numbers
 
 "interface
 set ruler
 set showcmd
 set showmatch
-set title "change the terminal's title
+set title
 set number
 set relativenumber
 set cmdheight=2
 set laststatus=2
-"set statusline=%F%m%r%h%w%<\ %{&ff}\ %Y\ %{fugitive#statusline()}\ %=%l,%v\ (%L)\ %p%%
 set scrolloff=3
 set visualbell
 
+set guioptions=-m
+
 set hidden "allow hidden buffers
-"set autochdir
 
 
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.obj,*.jpg,*.jpeg,*.png,*.gif
@@ -128,34 +125,15 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-let g:use_zen_complete_tag = 1
-let g:user_zen_settings = { 'indentation':'    '}
+" paste without formatting it.
+map <MouseMiddle> <Esc>"*p
 
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-
-"inoremap <C-space> <C-x><C-o>
-
-let g:secure_modelines_verbose=1
-
-let g:SuperTabDefaultCompletionType = "context"
-set completeopt=menuone,longest,preview
-
-"python tweaks
-"let g:virtualenv_auto_activate = 1
-let python_highlight_all = 1
-
-"minibufexpl
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplUseSingleClick = 1
 
 "tagbar
 let g:tagbar_usearrows = 1
 let g:tagbar_compact = 1
 nnoremap <silent> <F9>   :TagbarToggle<CR>
+
 
 "NERD tree
 nnoremap <F8> :NERDTreeToggle<CR>
@@ -164,66 +142,26 @@ let NERDChristmasTree = 1
 let NERDTreeMinimalUI=1
 let NERDTreeRespectWildIgnore=1
 
-"surround
-let g:surround_{char2nr("b")} = "{% block\1 \r..*\r &\1%}\r{% endblock %}"
-let g:surround_{char2nr("i")} = "{% if\1 \r..*\r &\1%}\r{% endif %}"
-let g:surround_{char2nr("w")} = "{% with\1 \r..*\r &\1%}\r{% endwith %}"
-let g:surround_{char2nr("c")} = "{% comment\1 \r..*\r &\1%}\r{% endcomment %}"
-let g:surround_{char2nr("f")} = "{% for\1 \r..*\r &\1%}\r{% endfor %}"
-let g:surround_{char2nr("v")} = "{{ \1 \r..*\r &\1\r }}"
 
 let g:syntastic_scss_checkers=['sassc', 'scss_lint']
 "let g:syntastic_debug=1
 
-" Rope AutoComplete
-" let ropevim_vim_completion = 1
-" let ropevim_extended_complete = 1
-" let g:ropevim_autoimport_modules = ["os.*","traceback","django.*","lxml.etree","lxml.*"]
-" imap <c-space> <C-R>=RopeCodeAssistInsertMode()<CR>
 
-" paste without formatting it.
-map <MouseMiddle> <Esc>"*p
-
-" powerline statusbar
-" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-
-
-" ctrlP
 let g:ctrlp_extensions = ['tag', 'buffertag', 'mixed']
 " let g:ctrlp_working_path_mode = 'ra'
 
-set guioptions=-m
 
-" ultisnips
-"let g:UltiSnipsListSnippets="<tab>"
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:ycm_python_binary_path = 'python'
+
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:ultisnips_python_style = "google"
 
-" jedi-vim
-let g:jedi#popup_on_dot = 0
-let g:jedi#use_tabs_not_buffers = 0
-let g:jedi#use_splits_not_buffers = "bottom"
-
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#popup_select_first = 0
-let g:jedi#completions_enabled = 0
-let g:jedi#completions_command = ""
-let g:jedi#show_call_signatures = "1"
-
-let g:jedi#goto_assignments_command = "<leader>pa"
-let g:jedi#goto_definitions_command = "<leader>pd"
-let g:jedi#documentation_command = "<leader>pk"
-let g:jedi#usages_command = "<leader>pu"
-let g:jedi#rename_command = "<leader>pr"
-
-
-" YouCompleteMe
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
-let g:ycm_python_binary_path = 'python'
 
 "python with virtualenv support
 "py << EOF

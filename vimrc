@@ -154,6 +154,9 @@ let g:ctrlp_extensions = ['tag', 'buffertag', 'mixed']
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:ycm_python_binary_path = 'python'
+nnoremap <leader>] :YcmCompleter GoTo<CR>
+nnoremap <leader>\ :YcmCompleter GoDoc<CR>
+
 
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
@@ -161,6 +164,10 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:ultisnips_python_style = "google"
+
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*\.spec\.ts$'] = ''
 
 
 "python with virtualenv support

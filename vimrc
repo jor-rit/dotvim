@@ -118,6 +118,7 @@ nnoremap <Leader>9 :9b<CR>
 nnoremap <Leader>0 :10b<CR>
 nnoremap <Leader>l :bnext<CR>
 nnoremap <Leader>h :bprevious<CR>
+nnoremap <Leader>c :bp\|bd #<CR>
 
 "split navigations
 nnoremap <C-J> <C-W><C-J>

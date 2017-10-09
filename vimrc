@@ -142,6 +142,7 @@ nnoremap <Leader><F8> :NERDTreeFind<CR>
 let NERDChristmasTree = 1
 let NERDTreeMinimalUI=1
 let NERDTreeRespectWildIgnore=1
+let NERDTreeShowHidden=1
 
 
 let g:syntastic_scss_checkers=['sassc', 'scss_lint']

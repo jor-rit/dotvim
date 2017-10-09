@@ -9,6 +9,7 @@ set fileencoding=utf-8
 
 set mouse=a
 
+set guifont=SauceCodePro\ Nerd\ Font\ 10
 
 if &t_Co > 2 || has("gui_running") "have colors
   syntax enable "syntac highlighting

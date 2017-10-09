@@ -51,9 +51,9 @@ augroup gitcommit
     autocmd FileType gitcommit setlocal spell
 augroup END
 
-augroup web
-    autocmd BufNewFile,BufRead *.js, *.html, *.css setlocal tabstop=2 softtabstop=2 shiftwidth=2
-augroup END
+"augroup web
+"    autocmd BufNewFile,BufRead *.js, *.html, *.css setlocal tabstop=2 softtabstop=2 shiftwidth=2
+"augroup END
 
 
 set list "show special chars

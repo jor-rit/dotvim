@@ -148,7 +148,7 @@ let NERDTreeRespectWildIgnore=1
 let NERDTreeShowHidden=1
 
 
-let g:syntastic_scss_checkers=['sassc', 'scss_lint']
+let g:syntastic_scss_checkers=['stylelint', 'sassc', 'scss_lint']
 "let g:syntastic_debug=1
 
 

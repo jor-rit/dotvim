@@ -61,3 +61,6 @@
 [submodule "pack/nav/start/nerdtree-git-plugin"]
 	path = pack/nav/start/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "pack/git/start/vimagit"]
+	path = pack/git/start/vimagit
+	url = https://github.com/jreybert/vimagit.git

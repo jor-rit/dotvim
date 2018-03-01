@@ -1,0 +1,38 @@
+snippet ng-service
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class ${1:#:ServiceName}Service {
+  ${0}
+  constructor() { }
+
+}
+endsnippet
+
+snippet ng-component
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: '$1',
+  templateUrl: '${2:#:name}.component.html'
+})
+export class ${1:#:ComponentName}Component implements OnInit {
+    constructor() { }
+
+    ngOnInit() { }
+    ${0}
+}
+endsnippet
+
+snippet import-obs
+import { Observable } from 'rxjs/Observable';
+endsnippet
+
+snippet import-beh
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+endsnippet
+
+snippet import-ops
+import 'rxjs/add/operator/${1:map}';
+${0}
+endsnippet

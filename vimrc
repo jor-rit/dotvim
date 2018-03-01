@@ -1,39 +1,15 @@
 set nocompatible "We are VIM
 
-"set t_Co=256 "force 256 colors
-
-"set ttyfast
-
 set encoding=utf-8
 set fileencoding=utf-8
 
 set mouse=a
-
-set guifont=SauceCodePro\ Nerd\ Font\ 10
-
-if &t_Co > 2 || has("gui_running") "have colors
-  syntax enable "syntac highlighting
-  set hlsearch  "highlight search pattern
-  set background=dark
-  if &t_Co > 255 || has("gui_running")
-    set termguicolors
-    colorscheme solarized8_dark_flat
-    " airline statusbar
-    let g:airline_powerline_fonts = 1
-    let g:airline#extensions#tabline#enabled = 1
-    packadd vim-airline
-    packadd vim-airline-themes
-  else
-    colo desert
-  endif
-endif
 
 set backspace=indent,eol,start
 
 let mapleader=","
 let maplocalleader="\\"
 
-syntax on "syntax highlighting
 filetype on  "detect filetype
 filetype plugin indent on "load indent file for filetype
 
@@ -189,3 +165,22 @@ let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*\.module\.ts$'] = 'î
 "  execfile(activate_this, dict(__file__=activate_this))
 "EOF
 
+if &t_Co > 2 || has("gui_running") "have colors
+  syntax enable "syntac highlighting
+  set hlsearch  "highlight search pattern
+  set background=dark
+  if &t_Co > 255 || has("gui_running")
+    set termguicolors
+    "let g:solarized_termtrans=1
+    colorscheme solarized8_flat
+    " airline statusbar
+    let g:airline_powerline_fonts = 1
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline_theme='solarized'
+    let g:airline_solarized_bg='dark'
+    packadd vim-airline
+    packadd vim-airline-themes
+  else
+    colo desert
+  endif
+endif

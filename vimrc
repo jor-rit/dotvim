@@ -10,6 +10,9 @@ set backspace=indent,eol,start
 let mapleader=","
 let maplocalleader="\\"
 
+set ttimeout
+set ttimeoutlen=100
+
 filetype on  "detect filetype
 filetype plugin indent on "load indent file for filetype
 
@@ -48,19 +51,20 @@ set laststatus=2
 set scrolloff=3
 set visualbell
 
+set guifont=SauceCodePro\ Nerd\ Font\ 10
 set guioptions=-m
 
 set hidden "allow hidden buffers
-
 
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.obj,*.jpg,*.jpeg,*.png,*.gif
 set wildmode=longest,list,full
 set wildmenu
 
 set nobackup
+set backupcopy=yes
 set undodir=~/.vim/undodir
 set undofile
-
+set history=1000
 set ignorecase "ignore case by default
 set smartcase  "unless I use capitals
 
@@ -73,10 +77,14 @@ set foldnestmax=4
 set autoindent
 set softtabstop=4 shiftwidth=4 expandtab
 
+
 inoremap <F1> <Nop>
 nnoremap <F1> <Nop>
 vnoremap <F1> <Nop>
 inoremap jk <Esc>
+
+" undo in insert mode
+inoremap <C-U> <C-G>u<C-U>
 
 nnoremap <leader>i :set list!<cr>
 nnoremap <leader>n :set number! relativenumber!<cr>
@@ -106,6 +114,8 @@ nnoremap <C-H> <C-W><C-H>
 " paste without formatting it.
 map <MouseMiddle> <Esc>"*p
 
+" clear hlsearch
+nnoremap <Leader>/ :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><Leader>/
 
 "tagbar
 let g:tagbar_usearrows = 1
@@ -148,6 +158,7 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:ultisnips_python_style = "google"
+let g:UltiSnipsSnippetsDir = '$HOME/.vim/snippets/'
 
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed

@@ -64,3 +64,6 @@
 [submodule "pack/git/start/vimagit"]
 	path = pack/git/start/vimagit
 	url = https://github.com/jreybert/vimagit.git
+[submodule "pack/python/start/isort"]
+	path = pack/python/start/isort
+	url = https://github.com/fisadev/vim-isort.git

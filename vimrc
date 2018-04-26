@@ -87,7 +87,7 @@ inoremap jk <Esc>
 inoremap <C-U> <C-G>u<C-U>
 
 nnoremap <leader>i :set list!<cr>
-nnoremap <leader>n :set number! relativenumber!<cr>
+nnoremap <leader>n :set relativenumber!<cr>
 
 set tags=.tags,$HOME/.tags/python27.tags
 "buffers

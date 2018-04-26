@@ -56,7 +56,7 @@ set guioptions=-m
 
 set hidden "allow hidden buffers
 
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.obj,*.jpg,*.jpeg,*.png,*.gif
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.obj
 set wildmode=longest,list,full
 set wildmenu
 

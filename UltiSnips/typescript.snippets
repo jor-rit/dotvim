@@ -25,14 +25,14 @@ export class ${1:#:ComponentName}Component implements OnInit {
 endsnippet
 
 snippet import-obs
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 endsnippet
 
 snippet import-beh
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject } from 'rxjs';
 endsnippet
 
-snippet import-ops
-import 'rxjs/add/operator/${1:map}';
+snippet import-ops "Import rxjs operator" b
+import { ${1:map} } from 'rxjs/operators';
 ${0}
 endsnippet

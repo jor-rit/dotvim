@@ -135,6 +135,7 @@ let NERDTreeShowHidden=1
 
 
 let g:syntastic_scss_checkers=['stylelint', 'sassc', 'scss_lint']
+let g:syntastic_typescript_tslint_exe='npx --no-install tslint'
 "let g:syntastic_debug=1
 
 

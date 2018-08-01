@@ -67,3 +67,6 @@
 [submodule "pack/python/start/isort"]
 	path = pack/python/start/isort
 	url = https://github.com/fisadev/vim-isort.git
+[submodule "pack/ide/start/vim-illuminate"]
+	path = pack/ide/start/vim-illuminate
+	url = https://github.com/RRethy/vim-illuminate.git

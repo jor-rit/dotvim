@@ -67,10 +67,12 @@ set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.obj
 set wildmode=longest,list,full
 set wildmenu
 
-set nobackup
 set backupcopy=yes
-set undodir=~/.vim/undodir
+set nobackup
 set undofile
+set backupdir=~/.vim/backup//
+set undodir=~/.vim/undodir//
+set directory=~/.vim/swp//
 set history=1000
 set ignorecase "ignore case by default
 set smartcase  "unless I use capitals
@@ -142,7 +144,7 @@ let NERDTreeShowHidden=1
 
 
 let g:syntastic_scss_checkers=['stylelint', 'sassc', 'scss_lint']
-let g:syntastic_typescript_tslint_exe='npx --no-install tslint'
+let g:syntastic_typescript_tslint_exe='npx --no-install tslint --project .'
 "let g:syntastic_debug=1
 
 
@@ -155,8 +157,10 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:ycm_python_binary_path = 'python'
+let g:ycm_extra_conf_globlist = ['~/devel/projects/*','!~/*']
 nnoremap <leader>] :YcmCompleter GoTo<CR>
-nnoremap <leader>\ :YcmCompleter GoDoc<CR>
+nnoremap <leader>\ :YcmCompleter GetDoc<CR>
+nnoremap <leader>f :YcmCompleter FixIt<CR>
 
 
 let g:SuperTabDefaultCompletionType = '<C-n>'
@@ -173,6 +177,12 @@ let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*\.spec\.ts$'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*\.module\.ts$'] = ''
 
+function! OnlyAndNerdtree()
+    let currentWindowID = win_getid()
+
+    windo if win_getid() != currentWindowID && &filetype != 'nerdtree' | close | endif
+endfunction
+command! Only call OnlyAndNerdtree()
 
 "python with virtualenv support
 "py << EOF

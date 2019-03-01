@@ -70,3 +70,9 @@
 [submodule "pack/ide/start/vim-illuminate"]
 	path = pack/ide/start/vim-illuminate
 	url = https://github.com/RRethy/vim-illuminate.git
+[submodule "pack/c/start/vim-clang-format"]
+	path = pack/c/start/vim-clang-format
+	url = https://github.com/rhysd/vim-clang-format
+[submodule "pack/ide/start/angular-cli.vim"]
+	path = pack/ide/start/angular-cli.vim
+	url = https://github.com/bdauria/angular-cli.vim.git

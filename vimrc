@@ -25,6 +25,13 @@ augroup django
     autocmd BufNewFile,BufRead urls.py setlocal nowrap
 augroup END
 
+augroup angular
+    autocmd!
+    autocmd VimEnter * if !empty(globpath('.','angular.json')) | let g:js_angular=1 | endif
+    autocmd FileType typescript if exists('g:js_angular') | set ft=typescript.angular | endif
+    autocmd FileType typescript if exists('g:js_angular') | call angular_cli#init() | endif
+augroup END
+
 augroup gitcommit
     autocmd!
     autocmd FileType gitcommit setlocal textwidth=72

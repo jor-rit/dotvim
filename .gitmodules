@@ -22,6 +22,7 @@
 [submodule "pack/ide/start/YouCompleteMe"]
 	path = pack/ide/start/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+    ignore=dirty
 [submodule "pack/nav/start/nerdtree"]
 	path = pack/nav/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git

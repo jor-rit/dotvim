@@ -77,3 +77,6 @@
 [submodule "pack/ide/start/angular-cli.vim"]
 	path = pack/ide/start/angular-cli.vim
 	url = https://github.com/bdauria/angular-cli.vim.git
+[submodule "pack/ide/start/ale"]
+	path = pack/ide/start/ale
+	url = https://github.com/w0rp/ale.git

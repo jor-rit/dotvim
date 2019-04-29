@@ -143,11 +143,6 @@ let NERDTreeRespectWildIgnore=1
 let NERDTreeShowHidden=1
 
 
-let g:syntastic_scss_checkers=['stylelint', 'sassc', 'scss_lint']
-let g:syntastic_typescript_tslint_exe='npx --no-install tslint --project .'
-"let g:syntastic_debug=1
-
-
 let g:ctrlp_extensions = ['tag', 'buffertag', 'mixed']
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 " let g:ctrlp_working_path_mode = 'ra'
@@ -162,6 +157,7 @@ nnoremap <leader>] :YcmCompleter GoTo<CR>
 nnoremap <leader>\ :YcmCompleter GetDoc<CR>
 nnoremap <leader>f :YcmCompleter FixIt<CR>
 
+let g:ale_linters_ignore = {'typescript': ['tslint']}
 
 let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:SuperTabClosePreviewOnPopupClose = 1
@@ -207,6 +203,7 @@ if &t_Co > 2 || has("gui_running") "have colors
     let g:airline#extensions#tabline#enabled = 1
     let g:airline_theme='solarized'
     let g:airline_solarized_bg='dark'
+    let g:airline#extensions#ale#enabled = 1
     packadd vim-airline
     packadd vim-airline-themes
   else

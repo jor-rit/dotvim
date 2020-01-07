@@ -128,6 +128,8 @@ map <MouseMiddle> <Esc>"*p
 " clear hlsearch
 nnoremap <Leader>/ :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><Leader>/
 
+nnoremap <Leader>g :Ggrep! <cword><CR><CR>
+
 "tagbar
 let g:tagbar_usearrows = 1
 let g:tagbar_compact = 1

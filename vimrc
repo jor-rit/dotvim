@@ -161,7 +161,9 @@ nnoremap <leader>] :YcmCompleter GoTo<CR>
 nnoremap <leader>\ :YcmCompleter GetDoc<CR>
 nnoremap <leader>f :YcmCompleter FixIt<CR>
 
-let g:ale_linters_ignore = {'typescript': ['tslint']}
+"let g:ale_linters_ignore = {'typescript': ['tslint']}
+let g:ale_fixers = {'typescript': ['eslint', 'tslint']}
+let g:ale_completion_tsserver_autoimport = 1
 
 let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:SuperTabClosePreviewOnPopupClose = 1

@@ -50,9 +50,6 @@
 [submodule "pack/nav/start/vim-devicons"]
 	path = pack/nav/start/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons
-[submodule "pack/ide/start/editorconfig"]
-	path = pack/ide/start/editorconfig
-	url = https://github.com/editorconfig/editorconfig-vim.git
 [submodule "pack/typescript/start/typescript-vim"]
 	path = pack/typescript/start/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git

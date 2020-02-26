@@ -77,3 +77,9 @@
 [submodule "pack/ide/start/ale"]
 	path = pack/ide/start/ale
 	url = https://github.com/w0rp/ale.git
+[submodule "pack/ide/vim-helm"]
+	path = pack/ide/vim-helm
+	url = https://github.com/towolf/vim-helm.git
+[submodule "pack/ide/start/vim-helm"]
+	path = pack/ide/start/vim-helm
+	url = https://github.com/towolf/vim-helm.git

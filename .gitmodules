@@ -80,3 +80,6 @@
 [submodule "pack/ide/start/vim-helm"]
 	path = pack/ide/start/vim-helm
 	url = https://github.com/towolf/vim-helm.git
+[submodule "pack/nav/start/vim-bbye"]
+	path = pack/nav/start/vim-bbye
+	url = https://github.com/moll/vim-bbye.git

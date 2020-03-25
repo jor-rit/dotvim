@@ -122,6 +122,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+"quickfix window
+nnoremap <leader>q :call asyncrun#quickfix_toggle(8)<CR>
+
 " paste without formatting it.
 map <MouseMiddle> <Esc>"*p
 

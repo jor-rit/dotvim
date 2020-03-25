@@ -83,3 +83,6 @@
 [submodule "pack/nav/start/vim-bbye"]
 	path = pack/nav/start/vim-bbye
 	url = https://github.com/moll/vim-bbye.git
+[submodule "pack/ide/start/asyncrun.vim"]
+	path = pack/ide/start/asyncrun.vim
+	url = https://github.com/skywind3000/asyncrun.vim.git

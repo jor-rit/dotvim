@@ -86,3 +86,6 @@
 [submodule "pack/ide/start/asyncrun.vim"]
 	path = pack/ide/start/asyncrun.vim
 	url = https://github.com/skywind3000/asyncrun.vim.git
+[submodule "pack/ide/start/mkdx"]
+	path = pack/ide/start/mkdx
+	url = https://github.com/SidOfc/mkdx.git

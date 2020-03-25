@@ -38,6 +38,8 @@ augroup gitcommit
     autocmd FileType gitcommit setlocal spell
 augroup END
 
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 "augroup web
 "    autocmd BufNewFile,BufRead *.js, *.html, *.css setlocal tabstop=2 softtabstop=2 shiftwidth=2
 "augroup END

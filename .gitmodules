@@ -89,3 +89,6 @@
 [submodule "pack/ide/start/mkdx"]
 	path = pack/ide/start/mkdx
 	url = https://github.com/SidOfc/mkdx.git
+[submodule "pack/ide/start/vim-repeat"]
+	path = pack/ide/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git

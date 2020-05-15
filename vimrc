@@ -160,15 +160,18 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-stand
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:ycm_python_binary_path = 'python'
+let g:ycm_server_python_interpreter = 'python3.7'
+
 let g:ycm_extra_conf_globlist = ['~/devel/projects/*','!~/*']
 nnoremap <leader>] :YcmCompleter GoTo<CR>
 nnoremap <leader>\ :YcmCompleter GetDoc<CR>
 nnoremap <leader>f :YcmCompleter FixIt<CR>
 
 "let g:ale_linters_ignore = {'typescript': ['tslint']}
-let g:ale_fixers = {'typescript': ['eslint', 'tslint']}
+let g:ale_fixers = {'typescript': ['eslint', 'tslint'], 'python': ['isort', 'black']}
 let g:ale_completion_tsserver_autoimport = 1
+let g:ale_python_auto_pipenv = 1
+nnoremap <leader>' :ALEFix<CR>
 
 let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:SuperTabClosePreviewOnPopupClose = 1

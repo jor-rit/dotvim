@@ -169,10 +169,13 @@ nnoremap <leader>] :YcmCompleter GoTo<CR>
 nnoremap <leader>\ :YcmCompleter GetDoc<CR>
 nnoremap <leader>f :YcmCompleter FixIt<CR>
 
-"let g:ale_linters_ignore = {'typescript': ['tslint']}
-let g:ale_fixers = {'typescript': ['eslint', 'tslint'], 'python': ['isort', 'black']}
+let g:ale_fixers = {'typescript': ['eslint'], 'python': ['isort', 'black']}
 let g:ale_completion_tsserver_autoimport = 1
 let g:ale_python_auto_pipenv = 1
+let g:ale_python_black_auto_pipenv = 1
+let g:ale_python_flake8_auto_pipenv = 1
+let g:ale_python_mypy_auto_pipenv = 1
+let g:ale_cache_executable_check_failures = 1
 nnoremap <leader>' :ALEFix<CR>
 
 let g:SuperTabDefaultCompletionType = '<C-n>'

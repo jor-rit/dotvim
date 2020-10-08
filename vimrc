@@ -152,9 +152,11 @@ let NERDTreeRespectWildIgnore=1
 let NERDTreeShowHidden=1
 
 
+" CtrlP
 let g:ctrlp_extensions = ['tag', 'buffertag', 'mixed']
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 " let g:ctrlp_working_path_mode = 'ra'
+nnoremap <Leader>p :CtrlPMRU<CR>
 
 
 let g:ycm_autoclose_preview_window_after_completion = 1

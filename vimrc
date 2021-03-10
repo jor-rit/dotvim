@@ -162,7 +162,7 @@ nnoremap <Leader>p :CtrlPMRU<CR>
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:ycm_server_python_interpreter = 'python3.7'
+" let g:ycm_server_python_interpreter = 'python3.8'
 
 let g:ycm_extra_conf_globlist = ['~/devel/projects/*','!~/*']
 nnoremap <leader>] :YcmCompleter GoTo<CR>
@@ -175,6 +175,7 @@ let g:ale_python_auto_pipenv = 1
 let g:ale_python_black_auto_pipenv = 1
 let g:ale_python_flake8_auto_pipenv = 1
 let g:ale_python_mypy_auto_pipenv = 1
+let g:ale_python_mypy_ignore_invalid_syntax = 1
 let g:ale_cache_executable_check_failures = 1
 nnoremap <leader>' :ALEFix<CR>
 

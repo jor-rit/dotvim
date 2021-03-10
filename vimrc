@@ -192,6 +192,9 @@ let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*\.spec\.ts$'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*\.module\.ts$'] = ''
 
+let g:mkdx#settings = { 'toc': { 'details': { 'enable': 1 } } }
+
+
 function! OnlyAndNerdtree()
     let currentWindowID = win_getid()
 

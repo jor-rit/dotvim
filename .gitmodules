@@ -92,3 +92,6 @@
 [submodule "pack/ide/start/vim-repeat"]
 	path = pack/ide/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "pack/ide/start/vim-unimpaired"]
+	path = pack/ide/start/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git

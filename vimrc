@@ -177,6 +177,7 @@ let g:ale_python_flake8_auto_pipenv = 1
 let g:ale_python_mypy_auto_pipenv = 1
 let g:ale_python_mypy_ignore_invalid_syntax = 1
 let g:ale_cache_executable_check_failures = 1
+let g:ale_python_black_options = '-S'
 nnoremap <leader>' :ALEFix<CR>
 
 let g:SuperTabDefaultCompletionType = '<C-n>'

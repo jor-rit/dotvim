@@ -38,6 +38,11 @@ augroup gitcommit
     autocmd FileType gitcommit setlocal spell
 augroup END
 
+augroup MKDX
+    au!
+    au FileType markdown so $HOME/.vim/pack/ide/start/mkdx/ftplugin/markdown.vim
+augroup END
+
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 "augroup web

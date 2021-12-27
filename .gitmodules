@@ -50,9 +50,6 @@
 [submodule "pack/nav/start/vim-devicons"]
 	path = pack/nav/start/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons
-[submodule "pack/typescript/start/typescript-vim"]
-	path = pack/typescript/start/typescript-vim
-	url = https://github.com/leafgarland/typescript-vim.git
 [submodule "pack/nav/start/nerdtree-git-plugin"]
 	path = pack/nav/start/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
@@ -95,3 +92,6 @@
 [submodule "pack/ide/start/vim-unimpaired"]
 	path = pack/ide/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "pack/typescript/start/yats.vim"]
+	path = pack/typescript/start/yats.vim
+	url = https://github.com/HerringtonDarkholme/yats.vim.git

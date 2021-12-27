@@ -44,6 +44,8 @@ augroup MKDX
 augroup END
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType typescript setlocal ts=2 sts=2 sw=2 expandtab
 
 "augroup web
 "    autocmd BufNewFile,BufRead *.js, *.html, *.css setlocal tabstop=2 softtabstop=2 shiftwidth=2
@@ -201,6 +203,7 @@ let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*\.module\.ts$'] = 'Óù
 
 let g:mkdx#settings = { 'toc': { 'details': { 'enable': 1 } } }
 
+let g:yats_host_keyword = 1
 
 function! OnlyAndNerdtree()
     let currentWindowID = win_getid()

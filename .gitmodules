@@ -95,3 +95,6 @@
 [submodule "pack/typescript/start/yats.vim"]
 	path = pack/typescript/start/yats.vim
 	url = https://github.com/HerringtonDarkholme/yats.vim.git
+[submodule "pack/ide/start/vim-terraform"]
+	path = pack/ide/start/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git

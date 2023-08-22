@@ -149,7 +149,6 @@ let g:tagbar_autofocus = 1
 let g:tagbar_foldlevel = 1
 nnoremap <silent> <F9> :TagbarToggle<CR>
 
-
 "NERD tree
 nnoremap <F8> :NERDTreeToggle<CR>
 nnoremap <Leader><F8> :NERDTreeFind<CR>
@@ -167,6 +166,7 @@ nnoremap <Leader>p :CtrlPMRU<CR>
 
 
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_enable_inlay_hints = 1
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 " let g:ycm_server_python_interpreter = 'python3.8'
@@ -176,15 +176,25 @@ nnoremap <leader>] :YcmCompleter GoTo<CR>
 nnoremap <leader>\ :YcmCompleter GetDoc<CR>
 nnoremap <leader>f :YcmCompleter FixIt<CR>
 
-let g:ale_fixers = {'typescript': ['eslint'], 'python': ['isort', 'black']}
+let g:ale_linters = {
+\    'go': ['golangci-lint', 'gopls'],
+\}
+let g:ale_fixers = {
+\    'javascript': ['eslint', 'prettier'],
+\    'typescript': ['eslint', 'prettier'],
+\    'typescriptreact': ['eslint', 'prettier'],
+\    'python': ['ruff', 'black'],
+\    'go': ['goimports'],
+\}
 let g:ale_completion_tsserver_autoimport = 1
+let g:ale_cache_executable_check_failures = 1
 let g:ale_python_auto_pipenv = 1
 let g:ale_python_black_auto_pipenv = 1
 let g:ale_python_flake8_auto_pipenv = 1
 let g:ale_python_mypy_auto_pipenv = 1
 let g:ale_python_mypy_ignore_invalid_syntax = 1
-let g:ale_cache_executable_check_failures = 1
-let g:ale_python_black_options = '-S'
+" let g:ale_python_black_options = '-S'
+let g:ale_go_golangci_lint_options = '--fast'
 nnoremap <leader>' :ALEFix<CR>
 
 let g:SuperTabDefaultCompletionType = '<C-n>'
@@ -204,6 +214,8 @@ let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*\.module\.ts$'] = 'Óù
 let g:mkdx#settings = { 'toc': { 'details': { 'enable': 1 } } }
 
 let g:yats_host_keyword = 1
+
+let g:terraform_fmt_on_save = 1
 
 function! OnlyAndNerdtree()
     let currentWindowID = win_getid()

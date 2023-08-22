@@ -98,3 +98,9 @@
 [submodule "pack/ide/start/vim-terraform"]
 	path = pack/ide/start/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
+[submodule "pack/ide/start/vim-jsx-pretty"]
+	path = pack/ide/start/vim-jsx-pretty
+	url = git@github.com:MaxMEllon/vim-jsx-pretty.git
+[submodule "pack/jsonc"]
+	path = pack/jsonc
+	url = git@github.com:neoclide/jsonc.vim.git
